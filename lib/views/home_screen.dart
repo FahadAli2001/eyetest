@@ -1,4 +1,5 @@
 import 'package:eyetest/const/colors.dart';
+import 'package:eyetest/views/level1_screen.dart';
 import 'package:eyetest/views/levels_screen.dart';
 import 'package:eyetest/views/menu_screen.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +61,12 @@ class _HomeScreenState extends State<HomeScreen> {
              const  SizedBox(
               height:200,
             ),
-            Image.asset("assets/play_btn.png"),
+            GestureDetector(
+              onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                =>const Level1Screen()));
+              },
+              child: Image.asset("assets/play_btn.png")),
           ],
         ),
       ),

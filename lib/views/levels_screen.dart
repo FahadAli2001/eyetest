@@ -1,4 +1,5 @@
 import 'package:eyetest/const/colors.dart';
+import 'package:eyetest/views/level1_screen.dart';
 import 'package:flutter/material.dart';
 
 class LevelScreen extends StatefulWidget {
@@ -42,7 +43,12 @@ class _LevelScreenState extends State<LevelScreen> {
         const  SizedBox(
             height: 50,
           ),
-          Image.asset("assets/level1_btn.png"),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)
+              =>const Level1Screen()));
+            },
+            child: Image.asset("assets/level1_btn.png")),
           const  SizedBox(
             height: 20,
           ),
